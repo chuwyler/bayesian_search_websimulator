@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Search Simulator</title>
+<style>
+a {
+  color: black;
+}
+a:visited {
+  color: black;
+}
+</style>
+</head>
+<body>
+<img src="/static/sub.png" width="40">&nbsp;<b>{{username}} ></b> &nbsp; tries: {{n_tries}} &nbsp; queries: {{queries}}
+
+<br><br>
+
+{% if found %}
+<script> alert("Found in sector {{true_sector}}!");</script>
+{% endif %}
+<form action="/game" method="post">
+{% if found %}
+<input type="submit" name="new_game" value="start new game">
+{% else %}
+<input type="text" name="q" width="10" type="number" autofocus>
+<input type="submit" name="search" value="search sector">
+<input type="submit" name="new_game" value="start new game">
+ &nbsp; [<a href="prior" onclick="window.open('prior', 'newwindow', 'width=700,height=250'); return false;">prior</a>]
+{% endif %}
+</form>
+{% if error_message %}
+<font color="red">{{error_message}}</font><br>
+{% endif %}
+
+<img src="/plot.png">
+
+</body>
+</html>
