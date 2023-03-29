@@ -1,6 +1,6 @@
 # Bayesian Search Websimulator
 
-A very simple game that simulates Bayesian search. In contrast to brute force approaches, Bayesian search involves prior information and updating that prior after each individual search. The concept is well-explained by Jared S. Murray [here](https://jaredsmurray.github.io/sta371h/files/05_bayes_rule%20(2).pdf).
+A very simple game that simulates Bayesian search. In contrast to brute force approaches, Bayesian search involves prior information and updating that prior after each individual search. The concept is well-explained by Jared S. Murray [here](https://jaredsmurray.github.io/sta371h/files/05_bayes_rule%20(2).pdf) and by Bárcena et al. [here](https://www.tandfonline.com/doi/full/10.1080/10691898.2019.1608875).
 
 The app is based on flask, matplotlib and numpy. To run it, create a virtual environment with python==3.7.5 or similar and the requirements given in requirements.txt and then run `flask run` in the current directory. The app will then attach to a local port that you can access via web browser.
 
