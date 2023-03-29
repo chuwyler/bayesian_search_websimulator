@@ -7,14 +7,12 @@ from matplotlib.figure import Figure
 from sim import SearchSimulator, show
 
 app = Flask(__name__)
-
-# Set the secret key to some random bytes. Keep this really secret!
-app.secret_key = b'_5#y2L"H3L8z\n\xec]/' # obviously changed in production webapp..
+app.secret_key = b'_5#y2L"H3G8z\n\xec]/' # obviously changed in production webapp..
 
 # initialize simulator
 n_x = 5
 n_y = 5
-sim = SearchSimulator( n_x=n_x, n_y=n_y, p=0.6, exp=3 )
+sim = SearchSimulator( n_x=n_x, n_y=n_y, p=0.6, exp=2.5 )
 
 # login procedure - for the moment just for fun, username is not used for anything else than display
 @app.route('/', methods=['GET', 'POST'])
@@ -41,7 +39,7 @@ def serve():
     # reset simulator if desired
     if new_game:
         print("new game!")
-        sim = SearchSimulator( n_x=n_x, n_y=n_y, p=0.6, exp=3 )
+        sim = SearchSimulator( n_x=n_x, n_y=n_y, p=0.6, exp=2.5 )
     
     # if q is set, find out if it can be casted to integer
     if q is not None and not new_game:
