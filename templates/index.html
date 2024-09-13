@@ -13,6 +13,8 @@ a:visited {
 <body>
 <img src="/static/sub.png" width="40">&nbsp;<b>{{username}} ></b> &nbsp; tries: {{n_tries}} &nbsp; queries: {{queries}}
 
+<br>
+<font size="2">Find the missing submarine with as few tries as possible!</font>
 <br><br>
 
 {% if found %}
@@ -27,12 +29,16 @@ a:visited {
 <input type="submit" name="new_game" value="start new game">
  &nbsp; [<a href="prior" onclick="window.open('prior', 'newwindow', 'width=700,height=250'); return false;">prior</a>]
 {% endif %}
+&nbsp; [<a href="/static/Bayesian_Search_Theory.pdf" target="_blank">instructions (de)</a>]
 </form>
 {% if error_message %}
 <font color="red">{{error_message}}</font><br>
 {% endif %}
 
 <img src="/plot.png">
+
+<br><br><br>
+Code is available on <a href="https://github.com/chuwyler/bayesian_search_websimulator/tree/main" target="_blank">Github</a>.
 
 </body>
 </html>

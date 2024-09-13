@@ -82,7 +82,7 @@ def create_figure():
 # return the flattened prior    
 @app.route('/prior')
 def return_prior():
-    return ', '.join( [str(i) for i in sim.prior] )    
+    return ', '.join( [str(i) for i in sim.prior] ) + '<br><br>(stacked rows)'
 
 
 if __name__ == '__main__':
